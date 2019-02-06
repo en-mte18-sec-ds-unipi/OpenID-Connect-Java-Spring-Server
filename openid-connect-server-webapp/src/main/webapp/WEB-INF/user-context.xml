@@ -48,7 +48,7 @@
 		<security:headers>
 			<security:frame-options policy="DENY" />
 		</security:headers>
-		<security:csrf />
+		<!-- <security:csrf /> -->
 	</security:http>	
 
 </beans>

@@ -357,6 +357,17 @@ CREATE TABLE IF NOT EXISTS saved_registered_client (
 	registered_client VARCHAR(8192)
 );
 
+CREATE TABLE IF NOT EXISTS fido_uaf (
+	id SERIAL PRIMARY KEY,
+	fido_otp VARCHAR(1024),
+	expiration TIMESTAMP,
+	preferred_username VARCHAR(256),
+	aaid VARCHAR(1024),
+	keyid VARCHAR(1024),
+	approved BOOLEAN,
+	auth_holder_id BIGINT
+);
+
 
 CREATE INDEX at_tv_idx ON access_token(token_value);
 CREATE INDEX ts_oi_idx ON token_scope(owner_id);

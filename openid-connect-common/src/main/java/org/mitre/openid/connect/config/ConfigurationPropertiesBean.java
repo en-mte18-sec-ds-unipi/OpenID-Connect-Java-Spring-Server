@@ -47,6 +47,10 @@ public class ConfigurationPropertiesBean {
 	private static final Logger logger = LoggerFactory.getLogger(ConfigurationPropertiesBean.class);
 
 	private String issuer;
+	
+	private String fidoUafServer;
+	
+	private int fidoExpiration;
 
 	private String topbarTitle;
 
@@ -103,6 +107,34 @@ public class ConfigurationPropertiesBean {
 	 */
 	public void setIssuer(String iss) {
 		issuer = iss;
+	}
+
+	/**
+	 * @return the fidoUafServer baseUrl
+	 */
+	public String getFidoUafServer() {
+		return fidoUafServer;
+	}
+
+	/**
+	 * @param fidoUafServer the fidoUafServer to set
+	 */
+	public void setFidoUafServer(String fidoUafUrl) {
+		fidoUafServer = fidoUafUrl;
+	}
+
+	/**
+	 * @return the fidoExpiration
+	 */
+	public int getFidoExpiration() {
+		return fidoExpiration;
+	}
+
+	/**
+	 * @param fidoExpiration the expiration time of registration request to set in seconds
+	 */
+	public void setFidoExpiration(int fidoExpiration) {
+		this.fidoExpiration = fidoExpiration;
 	}
 
 	/**

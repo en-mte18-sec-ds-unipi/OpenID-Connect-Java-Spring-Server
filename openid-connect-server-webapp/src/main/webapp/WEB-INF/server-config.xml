@@ -32,7 +32,13 @@
 	<bean id="configBean" class="org.mitre.openid.connect.config.ConfigurationPropertiesBean">
 	    
 	    <!-- This property sets the root URL of the server, known as the issuer -->
-		<property name="issuer" value="http://localhost:8080/openid-connect-server-webapp/" />
+		<property name="issuer" value="http://snf-5504.ok-kno.grnetcloud.net:8080/oidc/" />
+	    
+		<!-- This property sets the root URL of the FIDO UAF Server -->
+		<property name="fidoUafServer" value="https://snf-5159.ok-kno.grnetcloud.net/fido" />
+
+		<!-- This property sets the expiration time of FIDO UAF registration request is seconds -->
+		<property name="fidoExpiration" value="600" />
 		
 		<!-- This property is a URL pointing to a logo image 24px high to be used in the top bar -->
  		<property name="logoImageUrl" value="resources/images/openid_connect_small.png" />

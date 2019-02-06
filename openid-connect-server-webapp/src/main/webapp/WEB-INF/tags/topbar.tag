@@ -88,6 +88,7 @@
 							<a id="userButton" class="dropdown-toggle" data-toggle="dropdown" href=""><i class="icon-user icon-white"></i> ${ shortName } <span class="caret"></span></a>
 							<ul class="dropdown-menu pull-right">
 								<li><a href="manage/#user/profile" data-toggle="collapse" data-target=".nav-collapse">${ longName }</a></li>
+								<li><a href="fido_uaf" data-toggle="collapse" data-target=".nav-collapse">Setup FIDO UAF</a></li>
 								<li class="divider"></li>
 								<li><a href="" data-toggle="collapse" data-target=".nav-collapse" class="logoutLink"><i class="icon-remove"></i> <spring:message code="topbar.logout"/></a></li>
 							</ul>
@@ -104,6 +105,7 @@
 	                <ul class="nav hidden-desktop">
 	                    <security:authorize access="hasRole('ROLE_USER')">
 						<li><a href="manage/#user/profile">${ longName }</a></li>
+						<li><a href="fido_uaf">Setup FIDO UAF</a></li>
 						<li class="divider"></li>
 						<li><a href="" class="logoutLink"><i class="icon-remove"></i> <spring:message code="topbar.logout"/></a></li>
 	                    </security:authorize>

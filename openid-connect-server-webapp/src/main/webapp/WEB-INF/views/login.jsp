@@ -5,14 +5,12 @@
 
 <o:header title="Log In" />
 <script type="text/javascript">
-<!--
 
 $(document).ready(function() {
 	// select the appropriate field based on context
 	$('#<c:out value="${ login_hint != null ? 'j_password' : 'j_username' }" />').focus();
 });
 
-//-->
 </script>
 <o:topbar />
 <div class="container-fluid main">
@@ -24,8 +22,8 @@ $(document).ready(function() {
 	</c:if>
 
 
-	<div class="row-fluid">
-		<div class="span6 offset1 well">
+	<div class="row-fluid well">
+		<div class="span3 offset1">
 			<form action="${ config.issuer }${ config.issuer.endsWith('/') ? '' : '/' }j_spring_security_check" method="POST">
 				<div>
 					<div class="input-prepend input-block-level">
@@ -45,7 +43,14 @@ $(document).ready(function() {
 				</div>
 			</form>
 		</div>
+		<div class="span5 pull-right">
+			<div id="image"></div>
+		</div>
 	</div>
+	<script type="text/javascript">
+		var data = '{"baseUrl":"${ config.fidoUafServer }", "operation":"Auth", "authId": "${authId}"}';
+		$("#image").append("<img src='http://chart.apis.google.com/chart?cht=qr&chl=" + encodeURIComponent(data) + "&chs=250x250&chld=H|4' alt='qr' />");
+	</script>
 </div>
 
 <o:footer/>

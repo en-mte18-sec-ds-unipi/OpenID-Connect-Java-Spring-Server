@@ -25,6 +25,7 @@ import org.mitre.discovery.util.WebfingerURLNormalizer;
 import org.mitre.jwt.encryption.service.JWTEncryptionAndDecryptionService;
 import org.mitre.jwt.signer.service.JWTSigningAndValidationService;
 import org.mitre.oauth2.service.SystemScopeService;
+import org.mitre.fidouaf.web.FidoUafEndpoint;
 import org.mitre.oauth2.web.IntrospectionEndpoint;
 import org.mitre.oauth2.web.RevocationEndpoint;
 import org.mitre.openid.connect.config.ConfigurationPropertiesBean;
@@ -311,6 +312,7 @@ public class DiscoveryEndpoint {
 		//end_session_endpoint
 		m.put("jwks_uri", baseUrl + JWKSetPublishingEndpoint.URL);
 		m.put("registration_endpoint", baseUrl + DynamicClientRegistrationEndpoint.URL);
+		m.put("fido_uaf_endpoint", baseUrl + FidoUafEndpoint.URL);
 		m.put("scopes_supported", scopeService.toStrings(scopeService.getUnrestricted())); // these are the scopes that you can dynamically register for, which is what matters for discovery
 		m.put("response_types_supported", Lists.newArrayList("code", "token")); // we don't support these yet: , "id_token", "id_token token"));
 		m.put("grant_types_supported", grantTypes);

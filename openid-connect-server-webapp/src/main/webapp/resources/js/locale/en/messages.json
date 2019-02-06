@@ -226,6 +226,24 @@
         "scopes": "Scopes",
         "statistics": "Statistics"
     },
+    "fido_uaf": {
+		"request_code": {
+			"title": "Setup FIDO UAF",
+			"header": {
+                "register": "Link your FIDO UAF",
+                "deregister": "Unlink your FIDO UAF"
+            },
+			"description": "Enter the code displayed on your device into the box below and press submit",
+			"submit": "Submit"
+		},
+		"error": {
+			"error": "There was an error processing the FIDO OTP."
+		},
+		"approve": {
+			"approved": "The FIDO OTP has been approved.",
+			"notApproved": "The FIDO OTP has not been approved."
+        }
+    },
     "dynreg": {
         "client-id-placeholder": "Enter Client ID",
         "configuration-url": "Client Configuration URL",
@@ -407,7 +425,8 @@
 			"title": "Personal",
 			"approved_sites": "Manage Approved Sites",
 			"active_tokens": "Manage Active Tokens",
-			"profile_information": "View Profile Information"
+			"profile_information": "View Profile Information",
+			"profile_settings": "View Profile Settings"
 		},
 		"developer": {
 			"title": "Developer",
@@ -467,6 +486,6 @@
 	"login": {
 		"login_with_username_and_password": "Login with Username and Password",
 		"error": "The system was unable to log you in. Please try again."
-	}
+    }
 	
 }
